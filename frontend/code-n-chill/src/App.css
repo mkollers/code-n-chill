@@ -51,6 +51,11 @@ body {
   overflow: auto;
   display:block;
 }
+#start{
+  max-width: 300px;
+  padding:20px;
+  margin: auto;
+}
 
 h1 {
   text-decoration-style: none;

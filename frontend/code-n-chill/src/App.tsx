@@ -10,7 +10,7 @@ import Question from './components/question';
 const Home = (props: RouteComponentProps) => (
   <div>
     <h1>Welcome</h1>
-    <Link to="/question">Start</Link>
+    <Link to="/question" className="button_1" id="start">Start</Link>
   </div>
 )
 
