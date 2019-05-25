@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "question": "Frage",
+      "answers": [
+        {
+          "nextId": 2,
+          "text": "Antwort 2"
+        },
+        {
+          "nextId": 3,
+          "text": "Antwort 3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Frage 2",
+      "answers": [
+        {
+          "nextId": 1,
+          "text": "Zurück"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Frage 3"
+    }
+  ]
+}
