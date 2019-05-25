@@ -663,3 +663,23 @@ VALUES (
     (SELECT pk_id FROM node WHERE content = 'Startup'),
     (SELECT pk_id FROM node WHERE content = 'Do you want to try something new with huge potential, but less mature?')
 );
+
+INSERT INTO edge (fk_prev_node, fk_next_node) 
+VALUES (
+    (
+        SELECT n.pk_id FROM node n
+        INNER JOIN edge e
+        ON e.fk_next_node = n.pk_id
+        INNER JOIN node np
+        ON e.fk_prev_node = np.pk_id
+        WHERE n.content = 'Which platform/field?'
+        AND np.content = 'Get a job'
+    ),
+    (SELECT pk_id FROM node WHERE content = 'Doesn''t matter, I just want \$\$\$')
+);
+
+INSERT INTO edge (fk_prev_node, fk_next_node) 
+VALUES (
+    (SELECT pk_id FROM node WHERE content = 'Doesn''t matter, I just want \$\$\$'),
+    (SELECT pk_id FROM node WHERE content = 'Java')
+);
