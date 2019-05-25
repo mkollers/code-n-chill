@@ -21,7 +21,7 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Start with Scratch, then move on to...'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -33,7 +33,7 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'I don''t know just pick one for me'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -99,13 +99,13 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'The easy way'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'The best way'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -135,13 +135,13 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Auto'),
-    (SELECT pk_id FROM node WHERE content = 'Java')
+    (SELECT pk_id FROM node WHERE content = 'Java - $102.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Manual'),
-    (SELECT pk_id FROM node WHERE content = 'C')
+    (SELECT pk_id FROM node WHERE content = 'C - $102.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -153,7 +153,7 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'The really hard way (but easier to pick up other languages in the future)'),
-    (SELECT pk_id FROM node WHERE content = 'C++')
+    (SELECT pk_id FROM node WHERE content = 'C++ - $104.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -221,12 +221,12 @@ VALUES (
         WHERE n.content = 'Web'
         AND np.content = 'Which platform/field?'
     ),
-     (SELECT pk_id FROM node WHERE content = 'Does your web app provides info in real-time, like twitter?')
+     (SELECT pk_id FROM node WHERE content = 'Does your web app provide info in real-time, like twitter?')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
-     (SELECT pk_id FROM node WHERE content = 'Does your web app provides info in real-time, like twitter?'),
+     (SELECT pk_id FROM node WHERE content = 'Does your web app provide info in real-time, like twitter?'),
      (SELECT pk_id FROM node WHERE content = 'YES' AND (SELECT COUNT(*) FROM edge WHERE fk_next_node = pk_id) = 0)
 );
 
@@ -239,14 +239,14 @@ VALUES (
         INNER JOIN node np
         ON e.fk_prev_node = np.pk_id
         WHERE n.content = 'YES'
-        AND np.content = 'Does your web app provides info in real-time, like twitter?'
+        AND np.content = 'Does your web app provide info in real-time, like twitter?'
     ),
-     (SELECT pk_id FROM node WHERE content = 'JavaScript')
+     (SELECT pk_id FROM node WHERE content = 'JavaScript - $99.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
-     (SELECT pk_id FROM node WHERE content = 'Does your web app provides info in real-time, like twitter?'),
+     (SELECT pk_id FROM node WHERE content = 'Does your web app provide info in real-time, like twitter?'),
      (SELECT pk_id FROM node WHERE content = 'NO' LIMIT 1)
 );
 
@@ -259,7 +259,7 @@ VALUES (
         INNER JOIN node np
         ON e.fk_prev_node = np.pk_id
         WHERE n.content = 'NO'
-        AND np.content = 'Does your web app provides info in real-time, like twitter?'
+        AND np.content = 'Does your web app provide info in real-time, like twitter?'
     ),
      (SELECT pk_id FROM node WHERE content = 'Do you want to try something new with huge potential, but less mature?')
 );
@@ -325,19 +325,19 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
      (SELECT pk_id FROM node WHERE content = 'Lego'),
-     (SELECT pk_id FROM node WHERE content = 'Python')
+     (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
      (SELECT pk_id FROM node WHERE content = 'Play-Doh'),
-     (SELECT pk_id FROM node WHERE content = 'Ruby')
+     (SELECT pk_id FROM node WHERE content = 'Ruby - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
      (SELECT pk_id FROM node WHERE content = 'I''ve an old & ugly toy, but i love it so much!'),
-     (SELECT pk_id FROM node WHERE content = 'PHP')
+     (SELECT pk_id FROM node WHERE content = 'PHP - $89.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -393,25 +393,25 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Facebook'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Microsoft'),
-    (SELECT pk_id FROM node WHERE content = 'C#')
+    (SELECT pk_id FROM node WHERE content = 'C# - $94.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Google'),
-    (SELECT pk_id FROM node WHERE content = 'Python')
+    (SELECT pk_id FROM node WHERE content = 'Python - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Apple'),
-    (SELECT pk_id FROM node WHERE content = 'Objective-C')
+    (SELECT pk_id FROM node WHERE content = 'Objective-C - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -431,7 +431,7 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = '3D/Gaming'),
-    (SELECT pk_id FROM node WHERE content = 'C++')
+    (SELECT pk_id FROM node WHERE content = 'C++ - $104.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -497,13 +497,13 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'iOS'),
-    (SELECT pk_id FROM node WHERE content = 'Objective-C')
+    (SELECT pk_id FROM node WHERE content = 'Objective-C - $107.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'iOS'),
-    (SELECT pk_id FROM node WHERE content = 'Java')
+    (SELECT pk_id FROM node WHERE content = 'Java - $102.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -561,19 +561,19 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'I''m a fan!'),
-    (SELECT pk_id FROM node WHERE content = 'C#')
+    (SELECT pk_id FROM node WHERE content = 'C# - $94.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Not Bad'),
-    (SELECT pk_id FROM node WHERE content = 'Java')
+    (SELECT pk_id FROM node WHERE content = 'Java - $102.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Suck'),
-    (SELECT pk_id FROM node WHERE content = 'Java')
+    (SELECT pk_id FROM node WHERE content = 'Java - $102.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -631,7 +631,7 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Front-end (web interface)'),
-    (SELECT pk_id FROM node WHERE content = 'JavaScript')
+    (SELECT pk_id FROM node WHERE content = 'JavaScript - $99.000')
 );
 
 INSERT INTO edge (fk_prev_node, fk_next_node) 
@@ -681,5 +681,5 @@ VALUES (
 INSERT INTO edge (fk_prev_node, fk_next_node) 
 VALUES (
     (SELECT pk_id FROM node WHERE content = 'Doesn''t matter, I just want \$\$\$'),
-    (SELECT pk_id FROM node WHERE content = 'Java')
+    (SELECT pk_id FROM node WHERE content = 'Java - $102.000')
 );
