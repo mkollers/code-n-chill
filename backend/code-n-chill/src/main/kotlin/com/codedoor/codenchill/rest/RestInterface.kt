@@ -8,16 +8,21 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import java.util.*
+import java.util.logging.Logger
 
 @RestController
 @RequestMapping("/nodes")
 class RestInterface {
 
     @Autowired
+    private val logger: Logger?= null
+
+    @Autowired
     private val repository : NodeRepository? = null
 
     @GetMapping
     fun entryPoint() : CurrentNode{
+
         return getNode("e15d3e58-7ee3-11e9-8544-22000ac228ca")
     }
 
