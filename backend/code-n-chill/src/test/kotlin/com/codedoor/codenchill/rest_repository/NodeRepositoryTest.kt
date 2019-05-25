@@ -22,7 +22,7 @@ class NodeRepositoryTest {
         var nodes = repository!!.getAllNodes()
         assert(nodes.isNotEmpty())
 
-        nodes = repository!!.getChildNodes(nodes.get(0).id)
+        nodes = repository!!.getChildNodes(nodes[0].id)
         assert(nodes.size == 6)
     }
 

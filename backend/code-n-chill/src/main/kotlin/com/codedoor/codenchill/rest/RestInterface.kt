@@ -23,15 +23,14 @@ class RestInterface {
     @GetMapping
     fun entryPoint() : CurrentNode{
 
-        return getNode("e15d3e58-7ee3-11e9-8544-22000ac228ca")
+        return getNode(repository!!.getRootNode().id.toString())
     }
 
     @GetMapping("/{id}")
     fun getNode(@PathVariable id: String ): CurrentNode {
         val uuid = UUID.fromString(id)
         val (node, children) = accesDB(uuid)
-        val serializableNode = parseDBEntry(uuid, node, children)
-        return serializableNode
+        return parseDBEntry(uuid, node, children)
     }
 
 
@@ -43,8 +42,7 @@ class RestInterface {
 
     fun parseDBEntry(currentID : UUID, node: Node, childNodes: List<Node>) :CurrentNode{
         val children = childNodes.map { child -> Children(child.id, child.content) }
-        val parsedNode = CurrentNode(currentID, "content", "url", children)
-        //val parsedNode = CurrentNode(currentID, "content", "url", listOf(Children(UUID.fromString("123"), "hi")))
+        val parsedNode = CurrentNode(currentID, node.content, node.iconUrl, children)
         return parsedNode
     }
 
