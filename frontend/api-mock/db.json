@@ -2,7 +2,8 @@
   "nodes": [
     {
       "id": 1,
-      "question": "Frage",
+      "content": "Frage",
+      "iconUrl": "https://www.liberaldictionary.com/wp-content/uploads/2019/02/icon-0326.jpg",
       "answers": [
         {
           "nextId": 2,
@@ -16,7 +17,7 @@
     },
     {
       "id": 2,
-      "question": "Frage 2",
+      "content": "Frage 2",
       "answers": [
         {
           "nextId": 1,
@@ -26,7 +27,7 @@
     },
     {
       "id": 3,
-      "question": "Frage 3"
+      "content": "Frage 3"
     }
   ]
 }
