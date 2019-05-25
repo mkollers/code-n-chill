@@ -1,3 +1,5 @@
+DELETE FROM node; 
+
 INSERT INTO node (content, icon_url) 
 VALUES ('Why do you want to learn programming?', NULL);
 
