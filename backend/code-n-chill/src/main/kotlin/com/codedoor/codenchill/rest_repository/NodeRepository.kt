@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository
 @Repository
 interface NodeRepository : CrudRepository<Node, Long> {
     /***/
-    @Query("SELECT node FROM Node node")
-    fun getAllDecisions(): List<Node>
+    @Query(value = "SELECT node FROM Node node")
+    fun getAllNodes(): List<Node>
+
+    @Query(value = "SELECT node FROM Node node WHERE id = ?1")
+    fun getNextNodes(parentId: Int): List<Node>
 }
