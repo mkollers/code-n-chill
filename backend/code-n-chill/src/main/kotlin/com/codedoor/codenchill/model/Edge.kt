@@ -1,5 +1,6 @@
 package com.codedoor.codenchill.model
 
+import javax.persistence.EmbeddedId
 import javax.persistence.Entity
 import javax.persistence.OneToOne
 import javax.persistence.Table
@@ -8,15 +9,10 @@ import javax.persistence.Table
 @Table(name = "edge")
 class Edge {
 
-    
-    @OneToOne
-    var previousNode: Node? = null
+    @EmbeddedId
+    var primaryKey: EdgePk? = null
 
-    @OneToOne
-    var nextNode: Node? = null
-
-    constructor(previousNode: Node, nextNode: Node){
-        this.previousNode = previousNode
-        this.nextNode = nextNode
+    constructor(primaryKey: EdgePk){
+        this.primaryKey = primaryKey
     }
 }
