@@ -23,22 +23,22 @@ class NodeRepositoryTest {
     @Test
     fun getNextNodes() {
         var nodes = repository!!.getAllNodes()
-
         assert(nodes.isNotEmpty())
 
         nodes = repository!!.getChildNodes(nodes.get(0).id)
-
         assert(nodes.size == 6)
 
         for(node in nodes){
             var parentNodes = repository!!.getParentNodes(node.id)
             assert(parentNodes.size == 1)
-            assert(parentNodes.get(0).content == "Why do you want to learn programming?")
+            assert(parentNodes[0].content == "Why do you want to learn programming?")
         }
     }
 
     @Test
     fun getRootNode(){
-        //var node = repository!!.getRootNode()
+        var node = repository!!.getRootNode()
+
+        var bla: Boolean
     }
 }
