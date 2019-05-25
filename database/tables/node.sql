@@ -4,5 +4,6 @@ CREATE TABLE node(
     pk_id UUID NOT NULL DEFAULT uuid_generate_v1(),
     fk_parent UUID,
     content varchar,
-    icon_url varchar
+    icon_url varchar,
+    PRIMARY KEY (pk_id)
 );
