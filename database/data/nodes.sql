@@ -121,7 +121,7 @@ INSERT INTO node (content, icon_url)
 VALUES ('I''ve an old & ugly toy, but i love it so much!' , NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Get a Job', NULL);
+VALUES ('Get a job', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('Which platform/field?', NULL);
