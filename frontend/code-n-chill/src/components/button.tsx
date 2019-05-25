@@ -1,15 +1,11 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 
-const Button = (probs: {title: string}) => {
+const Button = (probs: {title: string, nextId: number}) => {
     return (
-       <button type="submit" className="button_1" onClick={() => funct()} >{probs.title}</button>
+       <Link to={'/question/' + probs.nextId} className="button_1">{probs.title}</Link>
     );
-  }
-
-  function funct(){
-    return 
-  }
-  
+  }  
 
 export default Button;

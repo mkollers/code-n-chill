@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "content": "Frage",
+      "iconUrl": "https://www.liberaldictionary.com/wp-content/uploads/2019/02/icon-0326.jpg",
+      "answers": [
+        {
+          "nextId": 2,
+          "text": "For my kids"
+        },
+        {
+          "nextId": 3,
+          "text": "Make money"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Frage 2",
+      "answers": [
+        {
+          "nextId": 1,
+          "text": "Zurück"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "content": "Programmiersprache"
+    }
+  ]
+}

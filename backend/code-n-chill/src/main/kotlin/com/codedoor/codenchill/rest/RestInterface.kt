@@ -3,14 +3,12 @@ package com.codedoor.codenchill.rest
 import com.codedoor.codenchill.model.Node
 import com.codedoor.codenchill.rest_repository.NodeRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import java.util.*
 import java.util.logging.Logger
 
 @RestController
+@CrossOrigin(origins = ["*"])
 @RequestMapping("/nodes")
 class RestInterface {
 
