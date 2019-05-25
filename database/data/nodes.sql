@@ -13,7 +13,7 @@ INSERT INTO node (content, icon_url)
 VALUES ('Start with Scratch, then move on to...', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Python', NULL);
+VALUES ('Python - $107.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('I don''t know just pick one for me', NULL);
@@ -55,19 +55,19 @@ INSERT INTO node (content, icon_url)
 VALUES ('Manual', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Java', NULL);
+VALUES ('Java - $102.000', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('C', NULL);
+VALUES ('C - $102.000', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Objective-C', NULL);
+VALUES ('Objective-C - $107.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('The really hard way (but easier to pick up other languages in the future)', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('C++', NULL);
+VALUES ('C++ - $104.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('YES', NULL);
@@ -88,13 +88,13 @@ INSERT INTO node (content, icon_url)
 VALUES ('NO', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('JavaScript', NULL);
+VALUES ('JavaScript - $99.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('Web', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Does your web app provides info in real-time, like twitter?', NULL);
+VALUES ('Does your web app provide info in real-time, like twitter?', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('<b>NOT SURE</b>', NULL);
@@ -112,10 +112,10 @@ INSERT INTO node (content, icon_url)
 VALUES ('Play-Doh', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('Ruby', NULL);
+VALUES ('Ruby - $107.000', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('PHP', NULL);
+VALUES ('PHP - $89.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('I''ve an old & ugly toy, but i love it so much!' , NULL);
@@ -169,7 +169,7 @@ INSERT INTO node (content, icon_url)
 VALUES ('I''m a fan!', NULL);
 
 INSERT INTO node (content, icon_url) 
-VALUES ('C#', NULL);
+VALUES ('C# - $94.000', NULL);
 
 INSERT INTO node (content, icon_url) 
 VALUES ('Not Bad', NULL);
