@@ -17,11 +17,17 @@ class NodeRepositoryTest {
     @Autowired
     val repository: NodeRepository? = null
 
-    @Autowired
-    val em: EntityManager? = null
+    @Test
+    fun getChildNodes() {
+        var nodes = repository!!.getAllNodes()
+        assert(nodes.isNotEmpty())
+
+        nodes = repository!!.getChildNodes(nodes.get(0).id)
+        assert(nodes.size == 6)
+    }
 
     @Test
-    fun getNextNodes() {
+    fun getParentNodes(){
         var nodes = repository!!.getAllNodes()
         assert(nodes.isNotEmpty())
 
@@ -38,7 +44,6 @@ class NodeRepositoryTest {
     @Test
     fun getRootNode(){
         var node = repository!!.getRootNode()
-
-        var bla: Boolean
+        assert(node.content == "Why do you want to learn programming?")
     }
 }

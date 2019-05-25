@@ -1,5 +1,6 @@
 package com.codedoor.codenchill.rest_repository
 
+import com.codedoor.codenchill.model.Edge
 import com.codedoor.codenchill.model.Node
 import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.CrudRepository
@@ -24,7 +25,6 @@ interface NodeRepository : CrudRepository<Node, Long> {
             "INNER JOIN Node cn ON cn.id = edge.primaryKey.previousNode WHERE node.id = ?1")
     fun getParentNodes(id: UUID): List<Node>
 
-    @Query(value = "SELECT node FROM Node node INNER JOIN Edge edge ON edge.primaryKey.previousNode = node.id " +
-            "INNER JOIN Node cn ON cn.id = edge.primaryKey.nextNode WHERE edge.primaryKey.previousNode = edge.primaryKey.nextNode")
+    @Query(value = "SELECT * FROM node n LEFT JOIN edge e ON e.fk_next_node = n.pk_id WHERE e.fk_next_node IS NULL", nativeQuery = true)
     fun getRootNode(): Node
 }
