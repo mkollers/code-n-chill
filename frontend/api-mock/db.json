@@ -7,11 +7,11 @@
       "answers": [
         {
           "nextId": 2,
-          "text": "Antwort 2"
+          "text": "For my kids"
         },
         {
           "nextId": 3,
-          "text": "Antwort 3"
+          "text": "Make money"
         }
       ]
     },
@@ -27,7 +27,7 @@
     },
     {
       "id": 3,
-      "content": "Frage 3"
+      "content": "Programmiersprache"
     }
   ]
 }
