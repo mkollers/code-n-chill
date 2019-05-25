@@ -2,7 +2,7 @@
   font-family: Verdana, Arial, Tahoma, sans-serif;
 }
 
-body{
+body {
   background: #f7f7f7;
 }
 
@@ -30,12 +30,17 @@ body{
   color: #61dafb;
 }
 
-.question{
+.question {
   max-width: 600px;
-  margin:auto;
+  margin: auto;
 }
 
-.button_1{
+.icon {
+  max-width: 50%;
+  margin: auto;
+}
+
+.button_1 {
   text-decoration: none;
   background:#737373;
   border:0;
@@ -47,6 +52,6 @@ body{
   display:block;
 }
 
-h1{
+h1 {
   text-decoration-style: none;
 }

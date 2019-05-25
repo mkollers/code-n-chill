@@ -14,31 +14,28 @@ interface IQuestion {
     nextId: number,
     text: string
   }>
-}
+};
 
 const Question = ({id}: QuestionProps) => {
-    const[obj, setObj] = useState({answers:[{ }]} as  IQuestion);
+  const[obj, setObj] = useState({answers:[{ }]} as  IQuestion);
+
   useEffect(() => {
     fetch(`http://localhost:8080/nodes/${id}`)
       .then((resp) => resp.json())
       .then((json) => {
-          setObj(json);
+        setObj(json);
       })
-  }, [id])
-console.log(obj.answers);
-const buttons= []
-var i;
-if (obj.answers !== undefined){
-for (i=0; i<obj.answers.length; i++){
-    buttons.push(<Button key={i} title={obj.answers[i].text} nextId={obj.answers[i].nextId}/>)
-}
-}
+  }, [id]);
+
+  const buttons = (obj.answers)
+    ? obj.answers.map((q, i) => <Button key={i} title={q.text} nextId={q.nextId}/>)
+    : [];
+
   return (
     <div className="question">
       <h1>{obj.content}</h1>
+      {obj.iconUrl ? <img src={obj.iconUrl} alt="Icon" className="icon" /> : null}
       {buttons}
-
-      
     </div>
   )
 }

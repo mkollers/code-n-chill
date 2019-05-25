@@ -1,13 +1,18 @@
 import React from 'react';
 
-import { Router, RouteComponentProps } from '@reach/router';
+import { Router, RouteComponentProps, Link } from '@reach/router';
 
 import logo from './logo.png';
 import './App.css';
 
 import Question from './components/question';
 
-const Home = (props: RouteComponentProps) => <h1>Welcome</h1>
+const Home = (props: RouteComponentProps) => (
+  <div>
+    <h1>Welcome</h1>
+    <Link to="/question">Start</Link>
+  </div>
+)
 
 const App: React.FC = () => {
   return (
