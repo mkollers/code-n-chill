@@ -23,6 +23,7 @@ const App: React.FC = () => {
       <Router>
         <Home path="/" />
         <Question path="/question/:id" />
+        <Question path="/question" />
       </Router>
     </div>
   );

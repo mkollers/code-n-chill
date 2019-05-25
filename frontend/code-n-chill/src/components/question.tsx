@@ -3,11 +3,11 @@ import { RouteComponentProps } from '@reach/router';
 import Button from './button';
 
 type QuestionProps = RouteComponentProps & {
-  id?: number
+  id?: string
 };
 
 interface IQuestion {
-  id: number
+  id: string
   content: string
   iconUrl: string
   answers: Array<{
@@ -17,7 +17,9 @@ interface IQuestion {
 };
 
 const Question = ({id}: QuestionProps) => {
-  const[obj, setObj] = useState({answers:[{ }]} as  IQuestion);
+  id = id || ""
+
+  const [obj, setObj] = useState({answers:[{ }]} as  IQuestion);
 
   useEffect(() => {
     fetch(`http://localhost:8080/nodes/${id}`)
