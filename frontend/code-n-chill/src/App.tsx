@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.png';
 import './App.css';
+import Button from './components/button';
+import Question from './components/question';
 
 const App: React.FC = () => {
   return (
@@ -16,11 +18,14 @@ const App: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          
         </a>
+        <Question quest="Frage"></Question>
+        <Button title="test"></Button>
+        <Button title="test2"></Button>
       </header>
     </div>
   );
-}
+  }
 
 export default App;
